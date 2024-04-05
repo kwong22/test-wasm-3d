@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WGPU Test</title>
+    <style>
+        canvas {
+            background-color: black;
+        }
+
+        .select-none {
+            /* Safari */
+            -webkit-user-select: none;
+            /* IE 10 and IE 11 */
+            -ms-user-select: none;
+            /* Standard syntax */
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body id="wasm-example" class="select-none" oncontextmenu="return false;">
+    <script type="module">
+        import init from "./pkg/wgpu_test.js";
+        init().then(() => {
+            console.log("WASM Loaded");
+        });
+    </script>
+</body>
+
+</html>
